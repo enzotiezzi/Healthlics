@@ -1,0 +1,475 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dashboard</h2>
+
+
+<div class="row" style="margin: 0 auto">
+    <div id="dormiu-bem" style="min-width:350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+    <div id="dores-membros-superiores" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+    <div id="dores-membros-inferiores" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+    <div id="dores-tronco" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+    <div id="alimetacao-correta" style="min-width:350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+    <div id="atividades-regulares" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+    <div id="atividades-vida-basica" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block;margin: 0 auto"></div>
+</div>
+<br /><br />
+
+
+<div class="row" style="margin: 0 auto">
+    <div id="temperamento-agressivo" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block"></div>
+    <div id="irritabilidade-facil" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block"></div>
+    <div id="indisposicao" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block"></div>
+    <div id="associabilidade-regular" style="min-width: 350px; height: 150px; max-width: 600px; display:inline-block"></div>
+</div>
+<script type="text/javascript">
+        $(function () {
+            var chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: "dormiu-bem",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Dormiu bem?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 56.33
+                    }, {
+                        name: "Não",
+                        y: 24.03
+                    }]
+                }]
+            });
+
+            var chart2 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "dores-membros-superiores",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Dores em membros superiores?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 34
+                    }, {
+                        name: "Não",
+                        y: 66
+                    }]
+                }]
+            });
+
+            var chart3 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "dores-membros-inferiores",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Dores em membros inferiores?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 45
+                    }, {
+                        name: "Não",
+                        y: 55
+                    }]
+                }]
+            });
+
+            var chart4 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "dores-tronco",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Dores no tronco'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 79
+                    }, {
+                        name: "Não",
+                        y: 21
+                    }]
+                }]
+            });
+
+            var chart5 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "alimetacao-correta",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Alimentação correta?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 52.33
+                    }, {
+                        name: "Não",
+                        y: 28.03
+                    }]
+                }]
+            });
+
+            var chart6 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "atividades-regulares",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Atividades regulares?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 70
+                    }, {
+                        name: "Não",
+                        y: 30
+                    }]
+                }]
+            });
+
+            var chart6 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "atividades-vida-basica",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Atividades de vida básica?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 46
+                    }, {
+                        name: "Não",
+                        y: 54
+                    }]
+                }]
+            });
+
+
+
+
+
+
+            var chart7 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "temperamento-agressivo",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Temperamento agressivo'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 56.33
+                    }, {
+                        name: "Não",
+                        y: 24.03
+                    }]
+                }]
+            });
+
+            var chart8 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "irritabilidade-facil",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Irritabilidade fácil?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 69.33
+                    }, {
+                        name: "Não",
+                        y: 31.03
+                    }]
+                }]
+            });
+
+            var chart9 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "indisposicao",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Indisposição?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 80.33
+                    }, {
+                        name: "Não",
+                        y: 20.03
+                    }]
+                }]
+            });
+
+            var chart10 = new Highcharts.Chart({
+                chart: {
+                    renderTo: "associabilidade-regular",
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Associabilidade regular?'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: "Brands",
+                    colorByPoint: true,
+                    data: [{
+                        name: "Sim",
+                        y: 56.33
+                    }, {
+                        name: "Não",
+                        y: 24.03
+                    }]
+                }]
+            });
+        });
+</script>

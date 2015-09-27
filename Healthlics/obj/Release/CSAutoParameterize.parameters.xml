@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ConnectionString-Web.config Connection String" description="ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:icatfqe62y.database.windows.net,1433;Database=healthlics;User ID=healthlics@icatfqe62y;Password=AAaa@@22;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Users\\igor\\Documents\\Visual\ Studio\ 2015\\Projects\\Healthlics\\Healthlics\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="Healthlics.Context-Web.config Connection String" description="Healthlics.Context Connection String used in web.config by the application to access the database." defaultValue="Healthlics.Context_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Users\\igor\\Documents\\Visual\ Studio\ 2015\\Projects\\Healthlics\\Healthlics\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Healthlics.Context']/@connectionString" />
+  </parameter>
+</parameters>
